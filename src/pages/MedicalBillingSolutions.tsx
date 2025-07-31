@@ -7,13 +7,13 @@ import {
     Stack,
     Divider,
   } from "@mui/material";
-  import { motion } from "framer-motion";
+  import { motion, Variants } from "framer-motion";
   import CheckCircleIcon from "@mui/icons-material/CheckCircle";
   
   const MotionBox = motion(Box);
   
   // Shared fade-in-up variant
-  const fadeInUpVariant = {
+  const fadeInUpVariant: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
       opacity: 1,
