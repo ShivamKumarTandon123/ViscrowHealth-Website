@@ -61,10 +61,10 @@ const RoiCalculator = () => {
     responsive: true,
     maintainAspectRatio: false,
     animation: { duration: 600, easing: "easeOutQuart" },
-    interaction: { mode: "index" as const, intersect: false },
+    interaction: { mode: "index", intersect: false },
     plugins: {
       legend: {
-        position: "top" as const,
+        position: "top",
         labels: {
           font: { family: "'Inter', 'Helvetica Neue', sans-serif", size: 13 },
           color: "#555",
@@ -74,7 +74,7 @@ const RoiCalculator = () => {
         },
       },
       tooltip: {
-        mode: "index" as const,
+        mode: "index",
         intersect: false,
         enabled: true,
         backgroundColor: "rgba(0, 0, 0, 0.75)",
@@ -288,7 +288,7 @@ const RoiCalculator = () => {
                       },
                     ],
                   }}
-                  options={chartOptions}
+                  options={chartOptions as any}
                 />
               </Box>
             </>

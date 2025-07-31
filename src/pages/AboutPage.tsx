@@ -5,13 +5,19 @@ import {
   Grid,
 } from "@mui/material";
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 import CallToAction from "../components/CallToAction";
 
 const MotionBox = motion(Box);
 const MotionImg = motion.img;
 
+interface SlideRevealProps {
+  children: ReactNode;
+  delay?: number;
+}
+
 // SlideReveal component
-const SlideReveal = ({ children, delay = 0 }) => (
+const SlideReveal = ({ children, delay = 0 }: SlideRevealProps) => (
   <Box sx={{ overflow: 'hidden', display: 'inline-block' }}>
     <motion.div
       initial={{ y: '100%' }}
